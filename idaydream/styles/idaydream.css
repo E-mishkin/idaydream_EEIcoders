@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+fieldset {
+    border: 3px solid rgb(245, 245, 245);
+    padding: 2em;
+}
+
+legend {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 110%;
+    width: 50%;
+    padding: 10px;
+}
+
+#main {
+    background-color: white;
+    margin: 0 7em;
+    padding: 3.5em;
+}
+
+#mainh1 {
+    font-size: 35pt;
+}
