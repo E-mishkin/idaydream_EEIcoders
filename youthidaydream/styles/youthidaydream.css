@@ -1,0 +1,27 @@
+fieldset{
+
+    padding: 1em;
+    border: 3px lightseagreen;
+    box-shadow: 5px 15px 8px 15px #888888;
+}
+body{
+    background-color: #9CEBFF;
+
+}
+
+div {
+    padding: 5px;
+}
+
+div label {
+    display: block;
+}
+.err {
+    color: red;
+    visibility: hidden;
+}
+
+
+#other-area{
+    display: none;
+}
