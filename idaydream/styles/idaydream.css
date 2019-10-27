@@ -3,7 +3,7 @@ body {
 }
 
 fieldset {
-    border: 3px solid rgb(245, 245, 245);
+    border: 3px solid rgb(240, 240, 240);
     padding: 2em;
 }
 
@@ -12,7 +12,12 @@ legend {
     font-variant: small-caps;
     font-size: 110%;
     width: 50%;
-    padding: 10px;
+    color: #3f9fb5;
+}
+
+#submit {
+    background-color: #3f9fb5;
+    border-color: #3f9fb5;
 }
 
 #main {
@@ -23,4 +28,23 @@ legend {
 
 #mainh1 {
     font-size: 35pt;
+}
+
+#jumbotron {
+    background-color: #3f9fb5;
+    color: white;
+}
+
+#otherForm {
+    display: none;
+}
+
+.forPolicy {
+    font-size: 30pt;
+}
+
+.err {
+    visibility: hidden;
+    color: red;
+    font-size: 70%;
 }
