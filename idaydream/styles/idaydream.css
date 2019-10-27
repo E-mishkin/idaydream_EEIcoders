@@ -75,7 +75,8 @@ legend {
     align-content: center;
     -moz-box-align: center;
     width: 80%;
-    padding-bottom: 6em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
 }
 img{
