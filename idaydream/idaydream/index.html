@@ -11,372 +11,490 @@
 
     <title>I Day Dream Volunteer Form</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!--Favicon-->
+    <link rel="icon" type="image/jpeg" href="images/iDayDreamGraphic_trim.png">
+    <img src="images/iDayDreamGraphic_trim.png" alt="youth" class="float-left"
+         id="graphic">
 </head>
 <body>
+<!-- Title and Contact Info -->
+<div class="jumbotron jumbotron-fluid" id="jumbotron">
+    <div class="container" id="main">
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#myToggleNav"
+                aria-controls="myToggleNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar-expand-sm ml-auto" >
+            <div class="container">
+                <div class="collapse navbar-collapse" id="myToggleNav">
+                    <div class="navbar-nav ml-sm-auto">
+                     <a class="nav-item nav-link" href="#home">HOME</a>
+                        <a class="navbar-brand d-none d-sm-inline-block" href="#"></a>
+                        <div class="dropdown">
+                        <a class="nav-item nav-link dropdown-toggle"
+                           data-toggle="dropdown" id="servicesDropdown"
+                           aria-haspopup="true" aria-expanded="false"
+                           href="#">WHO WE ARE</a>
+                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <a class="dropdown-item" href="#">OUR STORY</a>
+                            <a class="dropdown-item" href="#">MEET THE BOARD</a>
+                            <a class="dropdown-item" href="#">BLOG</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="#">BECOME A DREAMER</a>
+                    <div class="dropdown">
+                        <a class="nav-item nav-link dropdown-toggle"
+                           data-toggle="dropdown" id="Dropdown"
+                           aria-haspopup="true" aria-expanded="false"
+                           href="#">SUPPORT DREAMERS</a>
+                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <a class="dropdown-item" href="#">SUPPORT DREAMERS</a>
+                            <a class="dropdown-item" href="#">VOLUNTEERS</a>
+                            <a class="dropdown-item" href="#">CORPORATE SPONSORSHIP</a>
+                        </div>
+                    </div>
+                    <a class="nav-item nav-link" href="#">EVENTS</a>
+                    <a class="nav-item nav-link" href="#">DONATE</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Title and Contact Info -->
-    <div class="jumbotron jumbotron-fluid" id="jumbotron">
         <div class="container">
-            <h1 class="display-4" id="mainh1">Volunteer Form</h1>
+            <h1 class="display-4" id="mainh1">VOLUNTEERING AT ID.A.Y DREAM</h1>
             <hr class="my-4">
-            <p>Thank you for your interest in volunteering with iD.A.Y.dream.
+            <!--<p>Thank you for your interest in volunteering with iD.A.Y.dream.
                 We’re investing in an entire region of youth. Youth seeking success
-                through higher education, mentoring and etc.</p>
+                through higher education, mentoring and etc.</p>-->
+            <p id="volform">Volunteers for iD.A.Y. dream come in many forms.
+                We are always looking for extra hands at our many events and educational programs.
+                These volunteers work directly with our dreamers and provide important support for
+                our goal of inspiring tomorrow’s leaders.
+                Volunteers can also work behind the scenes to make dreams come true.
+                From administrative work to serving on our board of directors,
+                there are many ways you can make a difference.
+            </p>
+            <div>
+                <img src="images/volunteer.jpg" alt="youth" id="volunteer" class="center">
+            </div>
         </div>
     </div>
 
     <div class="container" id="main">
 
-    <form id="volunteer-form" action="confirmation.html">
+        <form id="volunteer-form" action="confirmation.html">
+            <!-- Background -->
+            <fieldset class="form-volunteer">
+                <legend>Background Check</legend><span class="required">*</span>
+                <p>Are you willing to complete a personal background check if requested?</p>
+                <div class="form-check">
+                    <input class="form-check-input form-check-inline"
+                           type="radio" name="methods"
+                           id="yes-back" value="yes">
+                    <label class="form-check-label" for="yes-back">yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input form-check-inline"
+                           type="radio" name="methods"
+                           id="no-back" value="no">
+                    <label class="form-check-label" for="no-back">no</label>
+                </div>
+                <span class="err" id="err-yesno-back">A background check must be submitted
+            </span>
+            </fieldset>
+            <!--Background Check Decline notification:-->
+            <div class=" alert alert-warning " id="warning-msg">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <h3>Background Check Decline notification:</h3>
+                <p>Because of our values as on organization and out of the safety of the youth we serve it is a requirement
+                    that a background check must be submitted.
+                    <strong>You have chosen to decline.</strong>
+                    Thank you for your consideration in volunteering with iD.A.Y.dream, at this time we are unable to
+                    move forward with your submission.
+                    Please do visit us again!</p>
+            </div>
 
-        <!-- Contact Information -->
-        <fieldset class="form-group">
-            <legend>Contact Info</legend>
-            <div class="form-group">
-                <p>Who filing out the form?</p>
-                <select class="form-control" id="filing">
-                    <option value="none">Select who will filing this form</option>
-                    <option value="al">Student</option>
-                    <option value="al">Parent</option>
-                </select>
-                <span class="err" id="err-filing">
+            <!-- Contact Information -->
+            <fieldset class="form-group">
+                <legend>Contact Info</legend>
+                <div class="form-group">
+                    <p>Who filing out the form?</p>
+                    <select class="form-control" id="filing">
+                        <option value="none">Select who will filing this form</option>
+                        <option value="al">Student</option>
+                        <option value="al">Parent</option>
+                    </select>
+                    <span class="err" id="err-filing">
                     Please select who will filing the form
                 </span>
-            </div>
+                </div>
 
-            <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName">
-                <span class="err" id="err-fname">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                    <span class="err" id="err-fname">
                     Please enter a first name
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName">
-                <span class="err" id="err-lname">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                    <span class="err" id="err-lname">
                     Please enter a last name
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="streetAddress">Street Address</label>
-                <input type="text" class="form-control" id="streetAddress">
-                <span class="err" id="err-street">
+                </div>
+                <div class="form-group">
+                    <label for="streetAddress">Street Address</label>
+                    <input type="text" class="form-control" id="streetAddress">
+                    <span class="err" id="err-street">
                     Please enter a street address
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" class="form-control" id="city">
-                <span class="err" id="err-city">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city">
+                    <span class="err" id="err-city">
                     Please enter a city
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="state">Select State</label>
-                <select class="form-control" id="state">
-                    <option value="none">Select State</option>
-                    <option value="al">AL</option>
-                    <option value="ak">AK</option>
-                    <option value="az">AZ</option>
-                    <option value="ar">AR</option>
-                    <option value="ca">CA</option>
-                    <option value="co">CO</option>
-                    <option value="ct">CT</option>
-                    <option value="de">DE</option>
-                    <option value="fl">FL</option>
-                    <option value="ga">GA</option>
-                    <option value="hi">HI</option>
-                    <option value="id">ID</option>
-                    <option value="il">IL</option>
-                    <option value="in">IN</option>
-                    <option value="ia">IA</option>
-                    <option value="ks">KS</option>
-                    <option value="ky">KY</option>
-                    <option value="la">LA</option>
-                    <option value="me">ME</option>
-                    <option value="md">MD</option>
-                    <option value="ma">MA</option>
-                    <option value="mi">MI</option>
-                    <option value="mn">MN</option>
-                    <option value="ms">MS</option>
-                    <option value="mo">MO</option>
-                    <option value="mt">MT</option>
-                    <option value="ne">NE</option>
-                    <option value="nv">NV</option>
-                    <option value="nh">NH</option>
-                    <option value="nj">NJ</option>
-                    <option value="nm">NM</option>
-                    <option value="ny">NY</option>
-                    <option value="nc">NC</option>
-                    <option value="nd">ND</option>
-                    <option value="oh">OH</option>
-                    <option value="ok">OK</option>
-                    <option value="or">OR</option>
-                    <option value="pa">PA</option>
-                    <option value="ri">RI</option>
-                    <option value="sc">SC</option>
-                    <option value="sd">SD</option>
-                    <option value="tn">TN</option>
-                    <option value="tx">TX</option>
-                    <option value="ut">UT</option>
-                    <option value="vt">VT</option>
-                    <option value="va">VA</option>
-                    <option value="wa">WA</option>
-                    <option value="wv">WV</option>
-                    <option value="wi">WI</option>
-                    <option value="wy">WY</option>
-                </select>
-                <span class="err" id="err-state">
+                </div>
+                <div class="form-group">
+                    <label for="state">Select State</label>
+                    <select class="form-control" id="state">
+                        <option value="none">Select State</option>
+                        <option value="al">AL</option>
+                        <option value="ak">AK</option>
+                        <option value="az">AZ</option>
+                        <option value="ar">AR</option>
+                        <option value="ca">CA</option>
+                        <option value="co">CO</option>
+                        <option value="ct">CT</option>
+                        <option value="de">DE</option>
+                        <option value="fl">FL</option>
+                        <option value="ga">GA</option>
+                        <option value="hi">HI</option>
+                        <option value="id">ID</option>
+                        <option value="il">IL</option>
+                        <option value="in">IN</option>
+                        <option value="ia">IA</option>
+                        <option value="ks">KS</option>
+                        <option value="ky">KY</option>
+                        <option value="la">LA</option>
+                        <option value="me">ME</option>
+                        <option value="md">MD</option>
+                        <option value="ma">MA</option>
+                        <option value="mi">MI</option>
+                        <option value="mn">MN</option>
+                        <option value="ms">MS</option>
+                        <option value="mo">MO</option>
+                        <option value="mt">MT</option>
+                        <option value="ne">NE</option>
+                        <option value="nv">NV</option>
+                        <option value="nh">NH</option>
+                        <option value="nj">NJ</option>
+                        <option value="nm">NM</option>
+                        <option value="ny">NY</option>
+                        <option value="nc">NC</option>
+                        <option value="nd">ND</option>
+                        <option value="oh">OH</option>
+                        <option value="ok">OK</option>
+                        <option value="or">OR</option>
+                        <option value="pa">PA</option>
+                        <option value="ri">RI</option>
+                        <option value="sc">SC</option>
+                        <option value="sd">SD</option>
+                        <option value="tn">TN</option>
+                        <option value="tx">TX</option>
+                        <option value="ut">UT</option>
+                        <option value="vt">VT</option>
+                        <option value="va">VA</option>
+                        <option value="wa">WA</option>
+                        <option value="wv">WV</option>
+                        <option value="wi">WI</option>
+                        <option value="wy">WY</option>
+                    </select>
+                    <span class="err" id="err-state">
                     Please enter a state
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="zip">ZIP Code</label>
-                <input type="number" class="form-control" id="zip">
-                <span class="err" id="err-zip">
+                </div>
+                <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="number" class="form-control" id="zip">
+                    <span class="err" id="err-zip">
                     Please enter a zip code
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="number" class="form-control" id="phone">
-                <span class="err" id="err-phone">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="form-control" id="phone">
+                    <span class="err" id="err-phone">
                     Please enter a phone number
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="text" class="form-control" id="email">
-                <span class="err" id="err-email">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" class="form-control" id="email">
+                    <span class="err" id="err-email">
                     Please enter a email
                 </span>
-            </div>
-            <div class="form-group">
-                <label for="tshirt">T-shirt Size (standard size)</label>
-                <select class="form-control" id="tshirt">
-                    <option value="none">Select a Size</option>
-                    <option value="small">S</option>
-                    <option value="medium">M</option>
-                    <option value="large">L</option>
-                    <option value="extraLarge">XL</option>
-                </select>
-                <span class="err" id="err-tshirt">
+                </div>
+                <div class="form-group">
+                    <label for="tshirt">T-shirt Size (standard size)</label>
+                    <select class="form-control" id="tshirt">
+                        <option value="none">Select a Size</option>
+                        <option value="small">S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        <option value="extraLarge">XL</option>
+                    </select>
+                    <span class="err" id="err-tshirt">
                     Please enter a t-shirt size
                 </span>
-            </div>
-        </fieldset>
+                </div>
+            </fieldset>
 
-        <!-- Interests -->
-        <fieldset class="form-group" id="interests">
-            <legend>Interests</legend>
-            <p><em>Tell us in which areas you are interested in volunteering.</em></p>
-            <div id="interestForm">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="events" id="events" name="interests[]">
-                    <label class="form-check-label" for="events">Events (Annual College Tour, Community Service, Annual New Year’s Eve Day Event)</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="fundraising" id="fundraising" name="interests[]">
-                    <label class="form-check-label" for="fundraising">Fundraising</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="newsletter" id="newsletter" name="interests[]">
-                    <label class="form-check-label" for="newsletter">Newsletter production (monthly)</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="volunteer" id="volunteer" name="interests[]">
-                    <label class="form-check-label" for="volunteer">Volunteer coordination</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="mentoring" id="mentoring" name="interests[]">
-                    <label class="form-check-label" for="mentoring">Mentoring</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="otherDiv" id="otherDiv" name="interests[]">
-                    <label class="form-check-label" for="otherDiv">Other</label>
-                </div>
+            <!-- Interests -->
+            <fieldset class="form-group" id="interests">
+                <legend>Interests</legend>
+                <p><em>Tell us in which areas you are interested in volunteering.</em></p>
+                <div id="interestForm">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="events" id="events" name="interests[]">
+                        <label class="form-check-label" for="events">Events (Annual College Tour, Community Service, Annual New Year’s Eve Day Event)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="fundraising" id="fundraising" name="interests[]">
+                        <label class="form-check-label" for="fundraising">Fundraising</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="newsletter" id="newsletter" name="interests[]">
+                        <label class="form-check-label" for="newsletter">Newsletter production (monthly)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="volunteer" id="volunteer" name="interests[]">
+                        <label class="form-check-label" for="volunteer">Volunteer coordination</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="mentoring" id="mentoring" name="interests[]">
+                        <label class="form-check-label" for="mentoring">Mentoring</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="otherDiv" id="otherDiv" name="interests[]">
+                        <label class="form-check-label" for="otherDiv">Other</label>
+                    </div>
 
-                <!-- Other (please specify) -->
-                <div class="form-group" id="otherForm">
-                    <br>
-                    <label for="other"><em>Please specify</em></label>
-                    <textarea class="form-control" id="other" rows="3" name="other"></textarea>
-                </div>
+                    <!-- Other (please specify) -->
+                    <div class="form-group" id="otherForm">
+                        <br>
+                        <label for="other"><em>Please specify</em></label>
+                        <textarea class="form-control" id="others" rows="3" name="other"></textarea>
+                    </div>
 
-                <span class="err" id="err-interests">
+                    <span class="err" id="err-interests">
                     Please add any interests
                 </span>
-            </div>
-        </fieldset>
+                </div>
+            </fieldset>
 
-        <!-- Special Skills or Qualifications -->
-        <fieldset class="form-group">
-            <legend>Special Skills or Qualifications</legend>
-            <p><em>Summarize special skills and qualifications you have acquired from
-                employment, previous volunteer work, or through other activities,
-                including hobbies or sports that pertain to our mission.</em></p>
-            <div class="form-group">
-                <textarea class="form-control" id="skills" rows="3"></textarea>
-            </div>
-            <span class="err" id="err-special">
+            <!-- Special Skills or Qualifications -->
+            <fieldset class="form-group">
+                <legend>Special Skills or Qualifications</legend>
+                <p><em>Summarize special skills and qualifications you have acquired from
+                    employment, previous volunteer work, or through other activities,
+                    including hobbies or sports that pertain to our mission.</em></p>
+                <div class="form-group">
+                    <textarea class="form-control" id="skills" rows="3"></textarea>
+                </div>
+                <span class="err" id="err-special">
                 Please specify your skills
             </span>
-        </fieldset>
+            </fieldset>
 
-        <!-- Previous Volunteer Experience -->
-        <fieldset class="form-group">
-            <legend>Previous Volunteer Experience</legend>
-            <p><em>Summarize your previous volunteer experience.</em></p>
-            <div class="form-group">
-                <textarea class="form-control" id="experience" rows="3"></textarea>
-            </div>
-        </fieldset>
-
-        <!-- Character References -->
-        <fieldset class="form-group">
-            <legend>Character References</legend>
-            <p><em>List references (Include at least three)</em></p>
-            <div class="row">
-                <div class="col">
-                    <label class="col-sm-2 col-form-label">Name</label>
-                    <input type="text" class="form-control" placeholder="Name">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Name">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Name">
+            <!-- Previous Volunteer Experience -->
+            <fieldset class="form-group">
+                <legend>Previous Volunteer Experience</legend>
+                <p><em>Summarize your previous volunteer experience.</em></p>
+                <div class="form-group">
+                    <textarea class="form-control" id="experience" rows="3"></textarea>
                 </div>
-                <div class="col">
-                    <label class="col-sm-2 col-form-label">Phone</label>
-                    <input type="text" class="form-control" placeholder="Phone">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Phone">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Phone">
-                </div>
-                <div class="col">
-                    <label class="col-sm-2 col-form-label">Email</label>
-                    <input type="text" class="form-control" placeholder="Email">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Email">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Email">
-                </div>
-                <div class="col">
-                    <label class="col-sm-2 col-form-label">Relation</label>
-                    <input type="text" class="form-control" placeholder="Relation">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Relation">
-                    <br>
-                    <input type="text" class="form-control" placeholder="Relation">
-                </div>
-            </div>
-        </fieldset>
+            </fieldset>
 
-        <!-- Volunteer Availability -->
-        <fieldset class="form-group">
-            <legend>Volunteer Availability</legend>
-            <p><em>Please select the choices that most fit your volunteer availability:</em></p>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="workshop4" id="workshop4" name="volunteerAvailability[]">
-                <label class="form-check-label" for="workshop4">Weekend workshop (4 hour shift)</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="workshop8" id="workshop8" name="volunteerAvailability[]">
-                <label class="form-check-label" for="workshop8">Weekend workshop (8 hour shift)</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="summerCamp" id="summerCamp" name="volunteerAvailability[]">
-                <label class="form-check-label" for="summerCamp">One-week summer camp</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="workshopWeekday" id="workshopWeekday" name="volunteerAvailability[]">
-                <label class="form-check-label" for="workshopWeekday">Weekday workshop</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="commitmentWeekday" id="commitmentWeekday" name="volunteerAvailability   []">
-                <label class="form-check-label" for="commitmentWeekday">Ongoing, weekday commitment</label>
-            </div>
-        </fieldset>
+            <!-- Character References -->
+            <fieldset class="form-group">
+                <legend>Character References</legend>
+                <p><em>List references (Include at least three)</em></p>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-sm-2 col-form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Name">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Name">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col">
+                        <label class="col-sm-2 col-form-label">Phone</label>
+                        <input type="text" class="form-control" placeholder="Phone">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Phone">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Phone">
+                    </div>
+                    <div class="col">
+                        <label class="col-sm-2 col-form-label">Email</label>
+                        <input type="text" class="form-control" placeholder="Email">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Email">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col">
+                        <label class="col-sm-2 col-form-label">Relation</label>
+                        <input type="text" class="form-control" placeholder="Relation">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Relation">
+                        <br>
+                        <input type="text" class="form-control" placeholder="Relation">
+                    </div>
+                </div>
+            </fieldset>
 
-        <!-- Why are you motivated -->
-        <fieldset class="form-group">
-            <legend>Why are you motivated to volunteer with us?</legend>
-            <div class="form-group">
-                <textarea class="form-control" id="motivated" rows="3"></textarea>
-            </div>
-        </fieldset>
+            <!-- Volunteer Availability -->
+            <fieldset class="form-group">
+                <legend>Volunteer Availability</legend>
+                <p><em>Please select the choices that most fit your volunteer availability:</em></p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="workshop4" id="workshop4" name="volunteerAvailability[]">
+                    <label class="form-check-label" for="workshop4">Weekend </label>
 
-        <!-- How did you hear about iD.A.Y.dream -->
-        <fieldset class="form-group">
-            <legend>How did you hear about iD.A.Y.dream</legend>
-            <div class="form-group">
-                <select class="form-control" id="hear">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="workshop8" id="workshop8" name="volunteerAvailability[]">
+                    <label class="form-check-label" for="workshop8">Summer camp one week</label>
+                </div>
+                <div class="form-group" id="form">
+                    <label for="Weekend">Please specify availability times: </label>
+                    <textarea class="form-control" id="Weekend" rows="3" name="Weekend"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Why are you motivated -->
+            <fieldset class="form-group">
+                <legend>Why are you motivated to volunteer with us?</legend>
+                <div class="form-group">
+                    <textarea class="form-control" id="motivated" rows="3"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- How did you hear about iD.A.Y.dream -->
+            <fieldset class="form-group">
+                <legend for="hear">How did you hear about iD.A.Y.dream?</legend>
+                <select class="form-control" id="hear" name="hear">
                     <option value="none">How did you hear about iD.A.Y.dream</option>
-                    <option value="al">Word of mouth / Friend / Colleague</option>
-                    <option value="al">Web / Social Media (Facebook, Twitter, Google, iD.A.Y.dream website)</option>
-                    <option value="al">Print (flyer, poster, brochure)</option>
-                    <option value="al">Corporate sponsor</option>
-                    <option value="al">Other</option>
+                    <option value="wom">Word of mouth / Friend / Colleague</option>
+                    <option value="sm">Web / Social Media (Facebook, Twitter, Google, iD.A.Y.dream website)</option>
+                    <option value="pfp">Print (flyer, poster, brochure)</option>
+                    <option value="cs">Corporate sponsor</option>
+                    <option value="ot">Other</option>
                 </select>
-            </div>
-        </fieldset>
-
-        <!-- Background -->
-        <fieldset class="form-group">
-            <legend>Background</legend>
-            <p><em>Are you willing to complete a personal background check if requested?</em></p>
-            <div class="form-group form-check-inline">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="yesBackground" value="yesBackground">
-                    <label class="form-check-label" for="yesBackground">Yes</label>
+                <span class="err" id="err-hear">
+                   Please write how did you hear about us
+                </span>
+                <!-- Other (please specify) -->
+                <div class="form-group" id="form4">
+                    <label for="Other">How did you hear about us</label>
+                    <textarea class="form-control" id="Other" rows="3" name="Other"></textarea>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="noBackground" value="noBackground">
-                    <label class="form-check-label" for="noBackground">No</label>
-                </div>
-            </div>
-        </fieldset>
+            </fieldset>
+        </form>
 
         <!-- Mailing List -->
         <fieldset class="form-group">
-            <legend>Volunteer Mailing List</legend>
-            <p><em>Would you like to be added to the volunteer mailing list?</em></p>
-            <div class="form-group form-check-inline">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="yesMailing" value="yesBackground">
-                    <label class="form-check-label" for="yesMailing">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="method" id="noMailing" value="noBackground">
-                    <label class="form-check-label" for="noMailing">No</label>
-                </div>
+            <legend>Volunteer Mailing List</legend><span class="required">*</span>
+            <p>Would you like to be added to the volunteer mailing list</p>
+            <div class="form-check">
+                <input class="form-check-input form-check-inline"
+                       type="radio" checked="checked" name="method"
+                       id="yes" value="yes">
+                <label class="form-check-label" for="yes">yes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input form-check-inline"
+                       type="radio" name="method"
+                       id="no" value="no">
+                <label class="form-check-label" for="no">no</label>
             </div>
         </fieldset>
 
-        <!-- Policy and Agreement -->
-        <div class="jumbotron">
-            <div class="container">
-                <h3 class="display-4 forPolicy">Our Policy</h3>
-                <p>
-                    Is the policy of this organization to provide equal opportunities without regard to race,
-                    color, religion, national origin, gender, sexual preference, age, or disability.</p>
-                <hr class="my-4">
-                <h3 class="display-4 forPolicy">Agreement and Signature</h3>
-                <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
-                    I understand that if I am accepted as a volunteer, any false statements, omissions, or other
-                    misrepresentations made by me on this application may result in my immediate dismissal.</p>
-                <hr class="my-4">
 
-                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <fieldset class="form-group">
+            <legend>Agreement and Signature</legend>
+            <div class="form-check" id="agreement">
+                <p>By submitting this application, I affirm that the facts set forth in it are true and complete.
+                    I understand that if I am accepted as a volunteer, any false statements, omissions, or other misrepresentations
+                    made by me on this application may result in my immediate dismissal.</p>
+                <input class="form-check-input"  type="checkbox"
+                       value="agree" id="agree" name="agree">
+                <label class="form-check-label" for="agree"><span class="required">*</span>
+                    I Agree to the Terms and Conditions
+                </label>
+            </div>
+            <span class="err" id="err-agreeBut">You must agree to the terms to be able to submit this form.</span>
+        </fieldset>
+        <fieldset class="form-group">
+            <div id="policy">
+                <legend>Our Policy</legend>
+                <p>Is the policy of this organization to provide equal opportunities without regard to race, color,
+                    religion, national origin, gender, sexual preference, age, or disability.</p>
+
+                <p> Thank you for completing this application form and for your interest in volunteering with us.</p>
+            </div>
+        </fieldset>
+
+        <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        <!-- Stay in the Know! -->
+        <div class="jumbotron">
+            <div class="container" id="jumbobottom" >
+                <h3 class="display-4">STAY IN THE KNOW!</h3>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" class="form-control" id="email">
+                    <span class="err" id="err-email">
+                    Please enter a email
+                </span>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                    <span class="err" id="err-fname">
+                    Please enter a first name
+                </span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                    <span class="err" id="err-lname">
+                    Please enter a last name
+                </span>
+                </div>
+                <!--            <p>-->
+                <!--                Is the policy of this organization to provide equal opportunities without regard to race,-->
+                <!--                color, religion, national origin, gender, sexual preference, age, or disability.</p>-->
+                <!--            <hr class="my-4">-->
+                <!--            <h3 class="display-4 forPolicy">Agreement and Signature</h3>-->
+                <!--            <p>By submitting this application, I affirm that the facts set forth in it are true and complete.-->
+                <!--                I understand that if I am accepted as a volunteer, any false statements, omissions, or other-->
+                <!--                misrepresentations made by me on this application may result in my immediate dismissal.</p>-->
+                <!--            <hr class="my-4">-->
+                <!---->
+                <!--            <button id="submit" type="submit" class="btn btn-primary">Submit</button>-->
 
             </div>
         </div>
 
 
-    </form>
+        </form>
     </div>
 
 
@@ -386,5 +504,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="scripts/idaydream.js"></script>
+    <script>
+        $("#hear").on("change", function () {
+            var hearSelect = document.getElementById("hear").value;
+            if (hearSelect == "ot") {
+                $("#form4").css("display", "block");
+            } else {
+                $("#form4").css("display", "none");
+            }
+        });
+        $("#yes-back").on("click",function() {
+            $("#warning-msg").css("display","none");
+        });
+        $("#no-back").on("click",function(){
+            $("#warning-msg").css("display","block");
+        });
+    </script>
 </body>
 </html>
