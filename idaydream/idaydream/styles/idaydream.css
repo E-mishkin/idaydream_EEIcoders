@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+fieldset {
+    border: 3px solid rgb(240, 240, 240);
+    padding: 2em;
+}
+
+legend {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 110%;
+    width: 50%;
+    color: #3f9fb5;
+}
+
+#submit {
+    background-color: #3f9fb5;
+    border-color: #3f9fb5;
+}
+
+#main {
+    background-color: white;
+    margin: 0 7em;
+    padding: 3.5em;
+}
+
+#mainh1 {
+    font-size: 35pt;
+}
+
+#jumbotron {
+    background-color: #3f9fb5;
+    color: white;
+}
+
+#otherForm {
+    display: none;
+}
+
+.forPolicy {
+    font-size: 30pt;
+}
+
+.err {
+    visibility: hidden;
+    color: red;
+    font-size: 70%;
+}
