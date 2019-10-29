@@ -1,28 +1,36 @@
-<?php
-$back_ground= $_POST['methods'];
-$mailing= $_POST['method'];
-$agreement= $_POST['agree'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>I Day Dream Volunteer Form</title>
+
+    <style>
+        h3 {
+            padding: 2em;
+        }
+    </style>
 </head>
 <body>
-<h1>Thank you for completing this application form and for your interest in volunteering with us.</h1>
-<h2>Summary:</h2>
-
-<p>Background Check:
-    <?php echo $back_ground ;?>
-</p>
-<p>Add to mailing list:
-    <?php echo $mailing;?>
-</p>
-<p>Agreement and Signature:
-    <?php echo $agreement;?>
-</p>
+    <h3>Thank you for completing this application form and for your interest in volunteering with us.</h3>
+    <div class="form-group m-5">
+        <table class="table">
+            <?php
+                foreach ($_POST as $key => $value) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo "<strong>$key</strong>";
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<em>$value</em>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+            ?>
+        </table>
+    </div>
 
 
 </body>

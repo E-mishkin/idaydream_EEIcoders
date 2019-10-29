@@ -1,9 +1,47 @@
-//Add other field if other is selected
+//Add other field if other is selected in "Interest" field
 $("input[type=checkbox]").on("change", function () {
     if($("#otherDiv").is(":checked")) {
         $("#otherForm").css("display", "block");
     } else {
         $("#otherForm").css("display", "none");
+    }
+});
+
+//Add other field if other is selected in "How did you hear about us"
+$("#hear").on("change", function () {
+    var hearSelect = document.getElementById("hear").value;
+    if (hearSelect == "ot") {
+        $("#form4").css("display", "block");
+    } else {
+        $("#form4").css("display", "none");
+    }
+});
+
+//Check if you agree with policies
+$("input[type=checkbox]").on("change", function () {
+    if($("#policy").is(":checked")) {
+        document.getElementById("submit").disabled = false;
+    } else {
+        document.getElementById("submit").disabled = true;
+    }
+});
+
+//Check is background select
+$("#yesBackground").on("click",function() {
+    $("#warning-msg").css("display","none");
+    $("#volunteer-form").css("display","block");
+});
+$("#noBackground").on("click",function(){
+    $("#warning-msg").css("display","block");
+    $("#volunteer-form").css("display","none");
+});
+
+//Add other field into volunteer availability
+$("input[type=checkbox]").on("change", function () {
+    if($("#weekend").is(":checked")) {
+        $("#form5").css("display", "block");
+    } else {
+        $("#form5").css("display", "none");
     }
 });
 
@@ -17,6 +55,16 @@ function validate() {
     var errors = document.getElementsByClassName("err");
     for (var i=0; i<errors.length; i++) {
         errors[i].style.visibility = "hidden";
+    }
+
+    //Check background
+    var back = document.getElementsByName("background");
+    if($(back).is(":checked")) {
+        isValid = true;
+    } else {
+        var errBack = document.getElementById("err-yesno-back");
+        errBack.style.visibility = "visible";
+        isValid = false;
     }
 
     //Check filing out dropdown list
@@ -102,7 +150,6 @@ function validate() {
     //Check interests
     var interests = document.getElementsByName("interests[]");
     if ($(interests).is(":checked")) {
-        isValid = true;
     } else {
         var errInterests = document.getElementById("err-interests");
         errInterests.style.visibility = "visible";
@@ -116,6 +163,71 @@ function validate() {
         errSkills.style.visibility = "visible";
         isValid = false;
     }
+
+    /*
+    //Check experience
+    var experience = document.getElementById("experience").value;
+    if (experience == "") {
+        var errExperience = document.getElementById("err-experience");
+        errExperience.style.visibility = "visible";
+        isValid = false;
+    }
+     */
+
+    //Check character references
+    var character = document.getElementsByName("character[]");
+    var characterValue = "";
+    for (var i=0; i<character.length; i++) {
+        if (character[i].value != "") {
+            characterValue = character[i].value;
+        }
+    }
+
+    if (characterValue == "") {
+        var errCharacter = document.getElementById("err-character");
+        errCharacter.style.visibility = "visible";
+        isValid = false;
+    }
+
+    /*
+    //Check volunteer
+    var volunteer = document.getElementsByName("volunteerAvailability[]");
+    if ($(volunteer).is(":checked")) {
+    } else {
+        var errVol = document.getElementById("err-volunteer");
+        errVol.style.visibility = "visible";
+        isValid = false;
+    }
+     */
+
+    //Check motivated
+    var motivated = document.getElementById("motivated").value;
+    if (motivated == "") {
+        var errMotivated = document.getElementById("err-motivated");
+        errMotivated.style.visibility = "visible";
+        isValid = false;
+    }
+
+    /*
+    //Check How did you hear
+    var hear = document.getElementById("hear").value;
+    if (hear == "none") {
+        var errHear = document.getElementById("err-hear");
+        errHear.style.visibility = "visible";
+        isValid = false;
+    }
+     */
+
+    /*
+    //Check mailing list
+    var mailing = document.getElementsByName("mailList");
+    if ($(mailing).is(":checked")) {
+    } else {
+        var errmMiling = document.getElementById("err-mailList");
+        errmMiling.style.visibility = "visible";
+        isValid = false;
+    }
+     */
 
     return isValid;
 

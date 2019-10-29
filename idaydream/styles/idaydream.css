@@ -1,55 +1,12 @@
-
-a{
-    color: black;
-}
 body {
     background-color: rgb(245, 245, 245);
 }
-.container{
-    align-content: center;
-}
-.display-4{
-    align-content: center;
-}
-.dropdown-menu{
-    background-color: black;
-}
-.dropdown-item{
-    color: white;
-}
-.err {
-    visibility: hidden;
-    color: red;
-    font-size: 70%;
-}
+
 fieldset {
     border: 3px solid rgb(240, 240, 240);
     padding: 2em;
 }
-.forPolicy {
-    font-size: 30pt;
-}
-#graphic{
-    width: 145px;
-    height: 125px;
-}
 
-html{
-    background-color: white;
-    margin: 0;
-
-}
-
-#jumbotron {
-    /*background-color: #3f9fb5;*/
-    background-color: white;
-    color: black;
-    /*background-image: url("images/volunteers_rock.jpg");*/
-}
-#jumbobottom{
-    background-color: #3f9fb5;
-    color: white;
-}
 legend {
     font-weight: bold;
     font-variant: small-caps;
@@ -57,42 +14,54 @@ legend {
     width: 50%;
     color: #3f9fb5;
 }
-#main {
-    /*margin-right: 8em;*/
-    /*margin-left: 8em;*/
-    background-color: white;
-    /*margin: 0 7em;*/
-    /*padding: 3.5em;*/
-}
-#mainh1 {
-    font-size: 30pt;
-}
-#submit {
-    background-color: black;
-    border-color: #3f9fb5;
-    margin: 3.5em 3.5em 3.5em 3.5em;
-}
-#volform{
-    display: block;
-    align-content: center;
-    -moz-box-align: center;
-    padding-top: 3em;
-    padding-bottom: 3em;
 
+#submit {
+    disabled: disabled;
 }
-img{
-    /*padding-right: 8em;*/
-    /*padding-left: 8em;*/
-    width: 100%;
-    height: 400px;
-    background-position: center;
-    display: block;
-    box-shadow: black;
-    margin-bottom: 2em;
+
+#submit {
+    background-color: #3f9fb5;
+    border-color: #3f9fb5;
 }
-#warning-msg{
-    display: -webkit-box;
+
+#main {
+    background-color: white;
+    margin: 0 7em;
+    padding: 3.5em;
+}
+
+#mainh1 {
+    font-size: 35pt;
+}
+
+#jumbotron {
+    background-color: #3f9fb5;
+    color: white;
+}
+
+#otherForm {
+    display: none;
+}
+
+#form4 {
+    display: none;
+}
+
+#form5 {
     display: none;
 }
 
 
+#warning-msg {
+    display: none;
+}
+
+.forPolicy {
+    font-size: 30pt;
+}
+
+.err {
+    visibility: hidden;
+    color: red;
+    font-size: 70%;
+}
