@@ -45,6 +45,11 @@ $("input[type=checkbox]").on("change", function () {
     }
 });
 
+//Add new character references
+$("#submit2").on("click", function () {
+
+});
+
 //Grab form for validation
 document.getElementById("volunteer-form").onsubmit = validate;
 
