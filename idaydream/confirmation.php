@@ -32,6 +32,26 @@
         </table>
     </div>
 
+    <?php
+    //Send form by email
+    $first = $_POST['firstName'];
+    $last = $_POST['lastName'];
+    $email = "emishkin@mail.greenriver.edu";
+    $email_body = "Volunteer Form Confirmation --\r\n";
+    $email_body .= "Name: $first $last\r\n";
+    $email_subject = "Volunteer Form Confirmation";
+    $to = $email;
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email \r\n";
+    $success = mail($to, $email_subject, $email_body, $headers);
+
+    //Print final form confirmation
+    $msg = $success ? "Volunteer Form has been successfully sent to us."
+        : "We're sorry. There was a problem with your form.";
+
+    echo "<div class=\"form-group m-5\"><p>$msg</p></div>";
+
+    ?>
 
 </body>
 </html>

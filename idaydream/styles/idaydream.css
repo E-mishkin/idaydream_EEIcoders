@@ -17,9 +17,11 @@ legend {
 
 #submit {
     disabled: disabled;
+    background-color: #3f9fb5;
+    border-color: #3f9fb5;
 }
 
-#submit {
+#submit2 {
     background-color: #3f9fb5;
     border-color: #3f9fb5;
 }
@@ -65,3 +67,5 @@ legend {
     color: red;
     font-size: 70%;
 }
+
+
