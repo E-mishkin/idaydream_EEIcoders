@@ -8,154 +8,161 @@
     <!-- Bootstrap CSS -->
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="styles/youthidaydream.css">
-    <title>Youth form</title>
+    <link rel="stylesheet" type="text/css" href="styles/youthidaydream.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <title>Youth Form</title>
 </head>
 <body>
-<div class="container" id="main">
-    <div class="jumbotron">
-        <div>
-            <img src="images/background_youth.jpg" class="img-fluid" alt="background" width="1028" >
-            <br>
-        </div>
-    <form id="youthidaydream-form" action="confirmation.php" method="POST">
-            <fieldset>
-                <legend></legend>
-                <div class="row">
-                    <div class="col">
-                        <label for="name">Name&#42;</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                        <span class="err" id="err-name">
-                        Please enter a Name
-            </span>
-                    </div>
-                <div class="col">
-                        <label for="email">Email&#42;</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                    <span class="err" id="err-email">
-                        Please enter an Email
-                    </span>
-                </div>
-                </div>
+    <div class="container" id="main">
+        <div class="jumbotron">
 
-                <div class="row">
-                    <div class="col">
-                        <label for="phone">Phone Number&#42;</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
-                        <span class="err" id="err-phone">
-                        Please enter a Phone number.
-            </span>
-                    </div>
-
-                <div class="col">
-                        <label>Gender&#42;</label>
-                        <select class="form-control" id="gender" name="gender">
-                            <option value="none">Gender</option>
-                            <option value="ml">Male</option>
-                            <option value="fm">Female</option>
-                            <option value="al">Prefer not to answer</option>
-                        </select>
-                    <span class="err" id="err-gender">
-                        Please select gender
-                    </span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label for="ethnicity">Ethnicity&#42;</label>
-                        <select class="form-control" id="ethnicity" name="ethnicity">
-                            <option value="none">Ethnicity</option>
-                            <option value="am">American Indian or Alaska Native</option>
-                            <option value="aa">Asian or Asian American</option>
-                            <option value="ba">Black or African American</option>
-                            <option value="hl">Hispanic or Latino/a</option>
-                            <option value="md">Middle Eastern or MENA</option>
-                            <option value="nh">Native Hawaiian or other Pacific Islander</option>
-                            <option value="sa">Southeast Asian</option>
-                            <option value="wh">White non-Hispanic</option>
-                            <option value="bm">Bi/Multiracial</option>
-                            <option value="ds">Declined to State</option>
-                        </select>
-                        <span class="err" id="err-ethnicity">
-                        Please select an Ethnicity
-            </span>
-                    </div>
-
-                    <div class="col">
-                        <label for="grad">Graduating class&#42;</label>
-                        <select class="form-control" id="grad" name="grad">
-                            <option value="none">Graduating class</option>
-                            <option value="al">2001</option>
-                            <option value="ak">2002</option>
-                            <option value="ak">2003</option>
-                            <option value="ak">2004</option>
-                            <option value="ak">2005</option>
-                            <option value="ak">2006</option>
-                            <option value="ak">2007</option>
-                            <option value="ak">2008</option>
-                            <option value="ak">2009</option>
-                            <option value="ak">2010</option>
-                            <option value="ak">2011</option>
-                            <option value="ak">2012</option>
-                            <option value="ak">2013</option>
-                            <option value="ak">2014</option>
-                            <option value="ak">2015</option>
-                            <option value="ak">2016</option>
-                            <option value="ak">2017</option>
-                            <option value="ak">2018</option>
-                            <option value="ak">2019</option>
-                        </select>
-                    <span class="err" id="err-grad">
-                        Please select graduation year
-            </span>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col">
-                        <label for="interest">College of Interest</label>
-                        <textarea class="form-control" id="interest" rows="2"></textarea>
-                    </div>
-
-                    <div class="col">
-                        <label for="career">Career Aspirations</label>
-                        <textarea class="form-control" id="career" rows="2"></textarea>
-                    </div>
-                </div>
-
+            <!-- The main picture -->
+            <div>
+                <img src="images/background_youth.jpg" class="img-fluid" alt="background" width="1030" >
                 <br>
+            </div>
 
-                <div class="row">
-                    <div class="col">
-                        <label for="favfood">Favorite Food/ Snacks</label>
-                        <textarea class="form-control" id="favfood" rows="1"></textarea>
+            <!-- Form with all fields -->
+            <form id="youthidaydream-form" action="confirmation.php" method="POST">
+                    <fieldset>
+                        <legend></legend>
+                        <div class="row">
+                            <div class="col">
+                                <label for="name">Name&#42;</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <span class="err" id="err-name">
+                                    Please enter a Name
+                                </span>
+                            </div>
+                            <div class="col">
+                                <label for="email">Email&#42;</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                <span class="err" id="err-email">
+                                    Please enter an Email
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="phone">Phone Number&#42;</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                                <span class="err" id="err-phone">
+                                    Please enter a Phone number.
+                                </span>
+                            </div>
+
+                            <div class="col">
+                                <label>Gender&#42;</label>
+                                <select class="form-control" id="gender" name="gender">
+                                    <option value="none">Gender</option>
+                                    <option value="ml">Male</option>
+                                    <option value="fm">Female</option>
+                                    <option value="al">Prefer not to answer</option>
+                                </select>
+                                <span class="err" id="err-gender">
+                                    Please select gender
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="ethnicity">Ethnicity&#42;</label>
+                                <select class="form-control" id="ethnicity" name="ethnicity">
+                                    <option value="none">Ethnicity</option>
+                                    <option value="am">American Indian or Alaska Native</option>
+                                    <option value="aa">Asian or Asian American</option>
+                                    <option value="ba">Black or African American</option>
+                                    <option value="hl">Hispanic or Latino/a</option>
+                                    <option value="md">Middle Eastern or MENA</option>
+                                    <option value="nh">Native Hawaiian or other Pacific Islander</option>
+                                    <option value="sa">Southeast Asian</option>
+                                    <option value="wh">White non-Hispanic</option>
+                                    <option value="bm">Bi/Multiracial</option>
+                                    <option value="ds">Declined to State</option>
+                                </select>
+                                <span class="err" id="err-ethnicity">
+                                    Please select an Ethnicity
+                                </span>
+                            </div>
+
+                            <div class="col">
+                                <label for="grad">Graduating class&#42;</label>
+                                <select class="form-control" id="grad" name="grad">
+                                    <option value="none">Graduating class</option>
+                                    <option value="al">2001</option>
+                                    <option value="ak">2002</option>
+                                    <option value="ak">2003</option>
+                                    <option value="ak">2004</option>
+                                    <option value="ak">2005</option>
+                                    <option value="ak">2006</option>
+                                    <option value="ak">2007</option>
+                                    <option value="ak">2008</option>
+                                    <option value="ak">2009</option>
+                                    <option value="ak">2010</option>
+                                    <option value="ak">2011</option>
+                                    <option value="ak">2012</option>
+                                    <option value="ak">2013</option>
+                                    <option value="ak">2014</option>
+                                    <option value="ak">2015</option>
+                                    <option value="ak">2016</option>
+                                    <option value="ak">2017</option>
+                                    <option value="ak">2018</option>
+                                    <option value="ak">2019</option>
+                                </select>
+                                <span class="err" id="err-grad">
+                                    Please select graduation year
+                                </span>
+                            </div>
+                        </div>
 
 
-                    </div>
-                    <div class="col">
-                        <label for="birth">Birthdate&#42;:</label>
-                        <input type="date" lang="en" data-date-format="mm/dd/yyyy" id="birth" name="birth">
-                        <span class="err" id="err-birth">
-                        Please select your birthdate
-            </span>
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="interest">College of Interest</label>
+                                <textarea class="form-control" id="interest" rows="2"></textarea>
+                            </div>
 
-            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
-            </fieldset>
-</form>
+                            <div class="col">
+                                <label for="career">Career Aspirations</label>
+                                <textarea class="form-control" id="career" rows="2"></textarea>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="favfood">Favorite Food/ Snacks</label>
+                                <textarea class="form-control" id="favfood" rows="1"></textarea>
+                            </div>
+                            <div class="col">
+                                <label for="birth">Birthdate&#42;:</label>
+                                <input class="form-control" type="date" lang="en" data-date-format="mm/dd/yyyy" id="birth" name="birth">
+                                <span class="err" id="err-birth">
+                                    Please select your birthdate
+                                </span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                        </div>
+
+                    </fieldset>
+            </form>
+        </div>
     </div>
-</div>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script crossorigin="anonymous"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="scripts/youthidaydream.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="scripts/youthidaydream.js"></script>
 </body>
 </html>
