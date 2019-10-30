@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,23 +15,24 @@
 <body>
 <div class="container" id="main">
     <div class="jumbotron">
-        <h1 class="display-4">Tell us about yourself</h1>
-        <hr class="my-4">
-
+        <div>
+            <img src="images/background_youth.jpg" class="img-fluid" alt="background" width="1028" >
+            <br>
+        </div>
     <form id="youthidaydream-form" action="confirmation.php" method="POST">
             <fieldset>
                 <legend></legend>
                 <div class="row">
                     <div class="col">
-                        <label for="name">Name&#42</label>
+                        <label for="name">Name&#42;</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                         <span class="err" id="err-name">
                         Please enter a Name
             </span>
                     </div>
                 <div class="col">
-                        <label for="email">Email&#42</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="email">
+                        <label for="email">Email&#42;</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                     <span class="err" id="err-email">
                         Please enter an Email
                     </span>
@@ -40,7 +41,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="phone">Phone Number&#42</label>
+                        <label for="phone">Phone Number&#42;</label>
                         <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                         <span class="err" id="err-phone">
                         Please enter a Phone number.
@@ -48,8 +49,8 @@
                     </div>
 
                 <div class="col">
-                        <label>Gender&#42</label>
-                        <select class="form-control" id="gender" name="gender" placeholder="Gender">
+                        <label>Gender&#42;</label>
+                        <select class="form-control" id="gender" name="gender">
                             <option value="none">Gender</option>
                             <option value="ml">Male</option>
                             <option value="fm">Female</option>
@@ -63,7 +64,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="ethnicity">Ethnicity&#42</label>
+                        <label for="ethnicity">Ethnicity&#42;</label>
                         <select class="form-control" id="ethnicity" name="ethnicity">
                             <option value="none">Ethnicity</option>
                             <option value="am">American Indian or Alaska Native</option>
@@ -83,7 +84,7 @@
                     </div>
 
                     <div class="col">
-                        <label for="grad">Graduating class&#42</label>
+                        <label for="grad">Graduating class&#42;</label>
                         <select class="form-control" id="grad" name="grad">
                             <option value="none">Graduating class</option>
                             <option value="al">2001</option>
@@ -129,13 +130,13 @@
 
                 <div class="row">
                     <div class="col">
-                        <label for="favfood">Favourite Food/ Snaks</label>
+                        <label for="favfood">Favorite Food/ Snacks</label>
                         <textarea class="form-control" id="favfood" rows="1"></textarea>
 
 
                     </div>
                     <div class="col">
-                        <label for="birth">Birthdate&#42:</label>
+                        <label for="birth">Birthdate&#42;:</label>
                         <input type="date" lang="en" data-date-format="mm/dd/yyyy" id="birth" name="birth">
                         <span class="err" id="err-birth">
                         Please select your birthdate
@@ -145,8 +146,6 @@
 
             <button class="btn btn-primary" id="submit" type="submit">Submit</button>
             </fieldset>
-    </form>
-
 </form>
     </div>
 </div>
