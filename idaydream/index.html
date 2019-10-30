@@ -16,61 +16,61 @@
 </head>
 <body>
 
-    <!-- Title and Contact Info -->
-    <div class="jumbotron jumbotron-fluid" id="jumbotron">
-        <div class="container">
-            <img src="images/logotype.png" alt="youth" class="float-left mr-3"  width="135">
-            <br>
-            <h1 class="display-4 center" id="mainh1">Volunteer Form</h1>
-
-            <hr class="my-4">
-            <p>Volunteers for iD.A.Y. dream come in many forms. We are always looking
-                for extra hands at our many events and educational programs.
-                These volunteers work directly with our dreamers and provide important
-                support for our goal of inspiring tomorrow’s leaders. Volunteers can also
-                work behind the scenes to make dreams come true. From administrative work
-                to serving on our board of directors, there are many ways you can make a difference.</p>
-        </div>
-    </div>
-
-
-    <div class="container" id="main">
-
-        <div>
-            <img src="images/background_pic.jpg" class="img-fluid" alt="Responsive image" width="1028">
-        </div>
+<!-- Title and Contact Info -->
+<div class="jumbotron jumbotron-fluid" id="jumbotron">
+    <div class="container">
+        <img src="images/logotype.png" alt="youth" class="center float-left" width="145">
         <br>
+        <h1 class="display-4 center" id="mainh1">Volunteer Form</h1>
 
-        <!-- Background -->
-        <fieldset class="form-group">
-            <legend>Background&#42;</legend>
-            <p><em>Are you willing to complete a personal background check if requested?</em></p>
-            <div class="form-group form-check-inline">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="background" id="yesBackground" value="yesBackground">
-                    <label class="form-check-label" for="yesBackground">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="background" id="noBackground" value="noBackground">
-                    <label class="form-check-label" for="noBackground">No</label>
-                </div>
+        <hr class="my-4">
+        <p>Volunteers for iD.A.Y. dream come in many forms. We are always looking
+            for extra hands at our many events and educational programs.
+            These volunteers work directly with our dreamers and provide important
+            support for our goal of inspiring tomorrow’s leaders. Volunteers can also
+            work behind the scenes to make dreams come true. From administrative work
+            to serving on our board of directors, there are many ways you can make a difference.</p>
+    </div>
+</div>
+
+
+<div class="container" id="main">
+
+    <div>
+        <img src="images/background_pic.jpg" alt="background"  align="center" width="1028">
+    </div>
+    <br>
+
+    <!-- Background -->
+    <fieldset class="form-group">
+        <legend>Background&#42;</legend>
+        <p><em>Are you willing to complete a personal background check if requested?</em></p>
+        <div class="form-group form-check-inline">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="background" id="yesBackground" value="yesBackground">
+                <label class="form-check-label" for="yesBackground">Yes</label>
             </div>
-            <span class="err" id="err-yesno-back">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="background" id="noBackground" value="noBackground">
+                <label class="form-check-label" for="noBackground">No</label>
+            </div>
+        </div>
+        <span class="err" id="err-yesno-back">
                 A background check must be submitted
             </span>
-        </fieldset>
+    </fieldset>
 
-        <!--Background Check Decline notification:-->
-        <div class="alert alert-danger" id="warning-msg">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <h3>Background Check Decline notification:</h3>
-            <p>Because of our values as on organization and out of the safety of the youth we serve it is a requirement
-                that a background check must be submitted.
-                <strong>You have chosen to decline.</strong>
-                Thank you for your consideration in volunteering with iD.A.Y.dream, at this time we are unable to
-                move forward with your submission.
-                <strong>Please do visit us again!</strong></p>
-        </div>
+    <!--Background Check Decline notification:-->
+    <div class="alert alert-danger" id="warning-msg">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <h3>Background Check Decline notification:</h3>
+        <p>Because of our values as on organization and out of the safety of the youth we serve it is a requirement
+            that a background check must be submitted.
+            <strong>You have chosen to decline.</strong>
+            Thank you for your consideration in volunteering with iD.A.Y.dream, at this time we are unable to
+            move forward with your submission.
+            <strong>Please do visit us again!</strong></p>
+    </div>
 
     <form id="volunteer-form" action="confirmation.php" method="post">
 
@@ -78,14 +78,14 @@
         <fieldset class="form-group">
             <legend>Contact Info&#42;</legend>
             <div class="form-group">
-                <label for="filing">Who filing out the form?</label>
-                <select class="form-control" id="filing" name="Who_filing:">
-                    <option value="none">Select who will filing this form</option>
+                <label for="filling">Who is filling this form?</label>
+                <select class="form-control" id="filling" name="Who_filling:">
+                    <option value="none">Who is filling this form</option>
                     <option value="Student">Student</option>
                     <option value="Parent">Parent</option>
                 </select>
-                <span class="err" id="err-filing">
-                    Please select who will filing the form
+                <span class="err" id="err-filling">
+                    Please select who is filling the form
                 </span>
             </div>
 
@@ -323,7 +323,7 @@
                 Please enter at least three character references
             </span>
             <div class="form-group">
-                <button id="submit2" type="button" class="btn btn-primary button" >Add Reference</button>
+                <button id="add" type="button" class="btn btn-primary" >+ Reference</button>
             </div>
         </fieldset>
 
@@ -420,21 +420,21 @@
                 </div>
                 <hr class="my-4">
 
-                <button id="submit" type="submit" class="btn btn-primary button" disabled>Submit</button>
+                <button id="submit" type="submit" class="btn btn-primary" disabled>Submit</button>
 
             </div>
         </div>
 
 
     </form>
-    </div>
+</div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="scripts/idaydream.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts/idaydream.js"></script>
 </body>
 </html>

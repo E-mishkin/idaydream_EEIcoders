@@ -45,11 +45,6 @@ $("input[type=checkbox]").on("change", function () {
     }
 });
 
-//Add new character references
-$("#submit2").on("click", function () {
-
-});
-
 //Grab form for validation
 document.getElementById("volunteer-form").onsubmit = validate;
 
@@ -58,13 +53,13 @@ function validate() {
 
     //Clear all error messages
     var errors = document.getElementsByClassName("err");
-    for (var i=0; i<errors.length; i++) {
+    for (var i = 0; i < errors.length; i++) {
         errors[i].style.visibility = "hidden";
     }
 
     //Check background
     var back = document.getElementsByName("background");
-    if($(back).is(":checked")) {
+    if ($(back).is(":checked")) {
         isValid = true;
     } else {
         var errBack = document.getElementById("err-yesno-back");
@@ -73,10 +68,10 @@ function validate() {
     }
 
     //Check filing out dropdown list
-    var filing = document.getElementById("filing").value;
-    if (filing == "none") {
-        var errFiling = document.getElementById("err-filing");
-        errFiling.style.visibility = "visible";
+    var filling = document.getElementById("filling").value;
+    if (filling == "none") {
+        var errFilling = document.getElementById("err-filling");
+        errFilling.style.visibility = "visible";
         isValid = false;
     }
 
@@ -182,7 +177,7 @@ function validate() {
     //Check character references
     var character = document.getElementsByName("character[]");
     var characterValue = "";
-    for (var i=0; i<character.length; i++) {
+    for (var i = 0; i < character.length; i++) {
         if (character[i].value != "") {
             characterValue = character[i].value;
         }
@@ -235,5 +230,4 @@ function validate() {
      */
 
     return isValid;
-
 }
