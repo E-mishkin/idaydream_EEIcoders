@@ -1,3 +1,14 @@
+//Add other field into Ethnicity
+$("#ethnicity").on("change", function () {
+    var ethnicity = document.getElementById("ethnicity").value;
+    if (ethnicity == "ot") {
+        $("#formEt").css("display", "block");
+    } else {
+        $("#formEt").css("display", "none");
+    }
+});
+
+
 document.getElementById("youthidaydream-form").onsubmit = validate;
 
 function validate() {
@@ -57,4 +68,3 @@ function validate() {
 
     return isValid;
 }
-
