@@ -1,5 +1,6 @@
 body {
     background-color: rgb(245, 245, 245);
+    font-family: 'Questrial', sans-serif;
 }
 
 fieldset {
@@ -9,10 +10,38 @@ fieldset {
 
 legend {
     font-weight: bold;
-    font-variant: small-caps;
-    font-size: 110%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 85%;
     width: 50%;
     color: #3f9fb5;
+}
+
+.h5 {
+    color: #3f9fb5;
+}
+
+#divIntro {
+    background-color: rgb(245, 245, 245);
+    padding: 20px 20px 10px 25px;
+}
+
+.button {
+    background-color: #3f9fb5;
+    border: 2px solid #3f9fb5;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 70%;
+    padding: 15px 32px;
+    margin-bottom: 0.3em;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #f5f5f5;
+    color: black;
+    border: 2px solid #3f9fb5;
 }
 
 #submit {
@@ -21,24 +50,37 @@ legend {
     border-color: #3f9fb5;
 }
 
-#submit2 {
-    background-color: #3f9fb5;
-    border-color: #3f9fb5;
+#submit:hover {
+    background-color: #e9ecef;
+    color: black;
+    border: 2px solid #3f9fb5;
 }
 
 #main {
     background-color: white;
-    margin: 0 7em;
     padding: 3.5em;
 }
 
 #mainh1 {
-    font-size: 35pt;
+    font-size: 30pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.4em;
 }
 
-#jumbotron {
+#jumbotron1 {
     background-color: #3f9fb5;
     color: white;
+    background-image: url("../images/background_pic.jpg");
+    background-size: cover;
+    height: 250px;
+}
+
+#jumbotron2 {
+    color: white;
+    background-image: url("../images/background_pic.jpg");
+    background-size: cover;
+    height: 250px;
 }
 
 #otherForm {
@@ -58,6 +100,19 @@ legend {
     display: none;
 }
 
+#indexP {
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 8px;
+    color: gray;
+    text-align: center;
+}
+
+#extra{
+    display: none;
+}
+
 .forPolicy {
     font-size: 30pt;
 }
@@ -67,5 +122,3 @@ legend {
     color: red;
     font-size: 70%;
 }
-
-
