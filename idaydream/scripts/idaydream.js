@@ -1,6 +1,6 @@
 //Add other field if other is selected in "Interest" field
 $("input[type=checkbox]").on("change", function () {
-    if($("#otherDiv").is(":checked")) {
+    if($("#otherInt").is(":checked")) {
         $("#otherForm").css("display", "block");
     } else {
         $("#otherForm").css("display", "none");
@@ -10,7 +10,7 @@ $("input[type=checkbox]").on("change", function () {
 //Add other field if other is selected in "How did you hear about us"
 $("#hear").on("change", function () {
     var hearSelect = document.getElementById("hear").value;
-    if (hearSelect == "ot") {
+    if (hearSelect == "Other") {
         $("#form4").css("display", "block");
     } else {
         $("#form4").css("display", "none");
@@ -27,6 +27,12 @@ $("input[type=checkbox]").on("change", function () {
 });
 
 //Check is background select
+if ($("#yesBackground").is(":checked")) {
+
+} else {
+    $("#volunteer-form").css("display","none");
+}
+
 $("#yesBackground").on("click",function() {
     $("#warning-msg").css("display","none");
     $("#volunteer-form").css("display","block");
@@ -47,9 +53,35 @@ $("input[type=checkbox]").on("change", function () {
 
 //Add new character references
 $("#submit2").on("click", function () {
-
+    $("#extra").css("display","block");
 });
 
+//Close new character references
+$("#closeBtn").on("click", function () {
+    $("#extra").css("display","none");
+});
+
+//Open volunteer form
+$("#submit3").on("click", function () {
+    window.location = "form_1.html";
+});
+
+//Open youth form
+$("#submit4").on("click", function () {
+    window.location = "../youthidaydream/index.html";
+});
+
+//Open summary volunteer form
+$("#submit5").on("click", function () {
+    window.location = "login.php";
+});
+
+//Open summary youth form
+// $("#submit6").on("click", function () {
+    // window.location = "../youthidaydream/dreamersummary.php";
+// });
+
+/*
 //Grab form for validation
 document.getElementById("volunteer-form").onsubmit = validate;
 
@@ -169,16 +201,6 @@ function validate() {
         isValid = false;
     }
 
-    /*
-    //Check experience
-    var experience = document.getElementById("experience").value;
-    if (experience == "") {
-        var errExperience = document.getElementById("err-experience");
-        errExperience.style.visibility = "visible";
-        isValid = false;
-    }
-     */
-
     //Check character references
     var character = document.getElementsByName("character[]");
     var characterValue = "";
@@ -194,17 +216,6 @@ function validate() {
         isValid = false;
     }
 
-    /*
-    //Check volunteer
-    var volunteer = document.getElementsByName("volunteerAvailability[]");
-    if ($(volunteer).is(":checked")) {
-    } else {
-        var errVol = document.getElementById("err-volunteer");
-        errVol.style.visibility = "visible";
-        isValid = false;
-    }
-     */
-
     //Check motivated
     var motivated = document.getElementById("motivated").value;
     if (motivated == "") {
@@ -213,7 +224,11 @@ function validate() {
         isValid = false;
     }
 
-    /*
+    return isValid;
+
+}
+
+ /*
     //Check How did you hear
     var hear = document.getElementById("hear").value;
     if (hear == "none") {
@@ -223,17 +238,34 @@ function validate() {
     }
      */
 
-    /*
-    //Check mailing list
-    var mailing = document.getElementsByName("mailList");
-    if ($(mailing).is(":checked")) {
-    } else {
-        var errmMiling = document.getElementById("err-mailList");
-        errmMiling.style.visibility = "visible";
-        isValid = false;
-    }
-     */
-
-    return isValid;
-
+/*
+//Check mailing list
+var mailing = document.getElementsByName("mailList");
+if ($(mailing).is(":checked")) {
+} else {
+    var errmMiling = document.getElementById("err-mailList");
+    errmMiling.style.visibility = "visible";
+    isValid = false;
 }
+ */
+
+/*
+//Check experience
+var experience = document.getElementById("experience").value;
+if (experience == "") {
+    var errExperience = document.getElementById("err-experience");
+    errExperience.style.visibility = "visible";
+    isValid = false;
+}
+ */
+
+/*
+//Check volunteer
+var volunteer = document.getElementsByName("volunteerAvailability[]");
+if ($(volunteer).is(":checked")) {
+} else {
+    var errVol = document.getElementById("err-volunteer");
+    errVol.style.visibility = "visible";
+    isValid = false;
+}
+ */
