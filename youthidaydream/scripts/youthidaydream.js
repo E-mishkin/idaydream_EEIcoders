@@ -1,7 +1,7 @@
 //Add other field into Ethnicity
 $("#ethnicity").on("change", function () {
     var ethnicity = document.getElementById("ethnicity").value;
-    if (ethnicity == "ot") {
+    if (ethnicity == "11") {
         $("#formEt").css("display", "block");
     } else {
         $("#formEt").css("display", "none");
@@ -9,6 +9,8 @@ $("#ethnicity").on("change", function () {
 });
 
 
+
+/*
 document.getElementById("youthidaydream-form").onsubmit = validate;
 
 function validate() {
@@ -66,5 +68,53 @@ function validate() {
         isValid = false;
     }
 
+var parentNAme = document.getElementById("parentNAme").value;
+if (parentNAme == "") {
+    var errparentName = document.getElementById("err-parentName");
+    errparentName.style.visibility = "visible";
+    isValid = false;
+}
+
+var parentEmail = document.getElementById("parentEmail").value;
+if (parentEmail == "") {
+    var errparentEmail = document.getElementById("err-parentEmail");
+    errparentEmail.style.visibility = "visible";
+    isValid = false;
+}
+var parentPhone = document.getElementById("parentPhone").value;
+if (parentPhone == "") {
+    var errparentPhone = document.getElementById("err-parentPhone");
+    errparentPhone.style.visibility = "visible";
+    isValid = false;
+}
+    return isValid;
+}
+*/
+
+document.getElementById("email-form").onsubmit = validate;
+
+function validate() {
+    var isValid = true;
+//Clear all error messages
+    var errors = document.getElementsByClassName("err");
+
+    for (var i = 0; i < errors.length; i++) {
+        errors[i].style.visibility = "hidden";
+    }
+
+//Check first name
+    var subject = document.getElementById("subject").value;
+    if (subject === "") {
+        var errSubject = document.getElementById("err-subject");
+        errSubject.style.visibility = "visible";
+        isValid = false;
+    }
+    //Check first name
+    var message = document.getElementById("message").value;
+    if (message === "") {
+        var errMessage = document.getElementById("err-message");
+        errMessage.style.visibility = "visible";
+        isValid = false;
+    }
     return isValid;
 }
