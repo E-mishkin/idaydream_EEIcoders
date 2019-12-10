@@ -78,3 +78,7 @@ legend {
 #formEt {
     display: none;
 }
+
+.warning {
+    color: red;
+}
